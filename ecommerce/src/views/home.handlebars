@@ -1,0 +1,36 @@
+<header>
+    <h1>Inicio</h1>
+</header>
+
+<main>
+    <section>
+        <h3>Productos</h3>
+        <div class="products">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>
+                            Precio
+                            <button id="sort-price-asc" class="btn btn-sm btn-light">▲</button>
+                            <button id="sort-price-desc" class="btn btn-sm btn-light">▼</button>
+                        </th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="products-table-body">
+
+                </tbody>
+            </table>
+            <div class="actions">
+                <button id="btn-refresh-products-list" class="btn btn-primary">Recargar Lista</button>
+                <button id="btn-view-cart" class="btn btn-primary">Ver Carrito</button>
+                <button id="btn-clear-cart" class="btn btn-danger">Vaciar Carrito</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="/api/public/js/products.js"></script>

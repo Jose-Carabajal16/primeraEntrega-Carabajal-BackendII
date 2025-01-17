@@ -1,0 +1,26 @@
+<header>
+    <h1>Detalles del Producto</h1>
+</header>
+
+<main>
+    <section>
+        <h2>{{product.title}}</h2>
+        <p>Descripción: {{product.description}}</p>
+        <p>Precio: ${{product.price}}</p>
+        <p>Categoría: {{product.category}}</p>
+        <p>Estado: {{product.status}}</p>
+        <button onclick="addToCart('{{product._id}}')">Agregar al carrito</button>
+    </section>
+</main>
+
+<script>
+    const addToCart = async (id) => {
+        try {
+            const response = await fetch(`/api/carts/add/${id}`, { method: "POST" });
+            if (response.ok) alert("Producto agregado al carrito");
+            else alert("Error al agregar al carrito");
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    };
+</script>

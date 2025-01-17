@@ -1,0 +1,16 @@
+<header>
+    <h1>Carrito de Compras</h1>
+</header>
+
+<main>
+    <section>
+        <h3>Productos en el carrito</h3>
+        <ul>
+            {{#each cart.products}}
+            <li>
+                {{this.product.title}} - Cantidad: {{this.quantity}}
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+</main>
